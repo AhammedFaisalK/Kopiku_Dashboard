@@ -1,7 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 function Dashboard() {
-  return <div>Dashboard Ready</div>;
+  return <DashboardContainer></DashboardContainer>;
 }
 
 export default Dashboard;
+const DashboardContainer = styled.section``;

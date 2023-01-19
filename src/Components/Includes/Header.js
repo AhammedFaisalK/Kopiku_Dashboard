@@ -65,7 +65,7 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #e6e2e1;
   width: 95%;
   margin: 0 auto;
   height: 140px;
