@@ -57,7 +57,9 @@ const LeftSideBar = styled.aside`
   background: #fff;
   height: 100vh;
 `;
-const MiddlePortion = styled.ul``;
+const MiddlePortion = styled.ul`
+  padding-top: 30px;
+`;
 const MenuItem = styled.li`
   width: 40px;
   margin: 0 auto 35px;
