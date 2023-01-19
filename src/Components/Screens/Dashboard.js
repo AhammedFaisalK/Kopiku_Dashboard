@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CardLinks from "./CardLinks";
+import Cards from "./Cards";
 
 function Dashboard() {
   return (
@@ -8,6 +9,7 @@ function Dashboard() {
       <FlexContainer>
         <LeftSideContainer>
           <CardLinks />
+          <Cards />
         </LeftSideContainer>
       </FlexContainer>
     </DashboardContainer>

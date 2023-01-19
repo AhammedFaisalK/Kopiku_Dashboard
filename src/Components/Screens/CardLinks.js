@@ -2,54 +2,46 @@ import React from "react";
 import styled from "styled-components";
 
 function CardLinks() {
+  const items = [
+    {
+      id: 0,
+      imageUrl: require("../../Assets/Images/Tea-fill.svg").default,
+      itemName: "Coffee",
+    },
+    {
+      id: 1,
+      imageUrl: require("../../Assets/Images/Tea-fill.svg").default,
+      itemName: "Tea",
+    },
+    {
+      id: 2,
+      imageUrl: require("../../Assets/Images/Cake.svg").default,
+      itemName: "Cakes",
+    },
+    {
+      id: 3,
+      imageUrl: require("../../Assets/Images/Bottle.svg").default,
+      itemName: "Bundles",
+    },
+    {
+      id: 4,
+      imageUrl: require("../../Assets/Images/Snack.svg").default,
+      itemName: "Snack",
+    },
+  ];
   return (
     <CardLinkContainer>
       <CardLinksList>
-        <ItemLink>
-          <ImageList>
-            <ListIcon
-              src={require("../../Assets/Images/Tea-fill.svg").default}
-              alt="Coffee Icon"
-            />
-          </ImageList>
-          <ItemName>Coffee</ItemName>
-        </ItemLink>
-        <ItemLink>
-          <ImageList>
-            <ListIcon
-              src={require("../../Assets/Images/Tea-fill.svg").default}
-              alt="Tea Icon"
-            />
-          </ImageList>
-          <ItemName>Tea</ItemName>
-        </ItemLink>
-        <ItemLink>
-          <ImageList>
-            <ListIcon
-              src={require("../../Assets/Images/Cake.svg").default}
-              alt="Cakes Icon"
-            />
-          </ImageList>
-          <ItemName>Cakes</ItemName>
-        </ItemLink>
-        <ItemLink>
-          <ImageList>
-            <ListIcon
-              src={require("../../Assets/Images/Bottle.svg").default}
-              alt="Bundles Icon"
-            />
-          </ImageList>
-          <ItemName>Bundles</ItemName>
-        </ItemLink>
-        <ItemLink>
-          <ImageList>
-            <ListIcon
-              src={require("../../Assets/Images/Snack.svg").default}
-              alt="Snack Icon"
-            />
-          </ImageList>
-          <ItemName>Snack</ItemName>
-        </ItemLink>
+        {items.map((item) => {
+          return (
+            <ItemLink key={item.id}>
+              <ImageList>
+                <ListIcon src={item.imageUrl} alt={item.itemName} />
+              </ImageList>
+              <ItemName>{item.itemName}</ItemName>
+            </ItemLink>
+          );
+        })}
       </CardLinksList>
     </CardLinkContainer>
   );
