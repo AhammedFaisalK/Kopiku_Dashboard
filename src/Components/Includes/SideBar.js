@@ -63,6 +63,9 @@ const MiddlePortion = styled.ul`
 const MenuItem = styled.li`
   width: 40px;
   margin: 0 auto 35px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 const IconContainer = styled.span`
   width: 30px;

@@ -48,7 +48,7 @@ function Header() {
         <AddMenuContainer>
           <Add>
             <AddImage
-              src={require("../../Assets/Images/Plus.svg").default}
+              src={require("../../Assets/Images/Add.svg").default}
               alt="Add Icon"
             />
           </Add>
@@ -172,7 +172,6 @@ const Add = styled.div`
   margin-right: 20px;
 `;
 const AddImage = styled.img`
-  filter: invert();
   display: block;
   width: 100%;
 `;
