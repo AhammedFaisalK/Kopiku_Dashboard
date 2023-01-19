@@ -11,6 +11,7 @@ function Dashboard() {
           <CardLinks />
           <Cards />
         </LeftSideContainer>
+        <RightSideContainer></RightSideContainer>
       </FlexContainer>
     </DashboardContainer>
   );
@@ -26,5 +27,6 @@ const FlexContainer = styled.div`
   display: flex;
 `;
 const LeftSideContainer = styled.div`
-  width: 50%;
+  width: 60%;
 `;
+const RightSideContainer = styled.div``;
