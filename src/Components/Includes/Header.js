@@ -4,38 +4,55 @@ import styled from "styled-components";
 function Header() {
   return (
     <MainContainer>
-      <WebsiteNameContainer>
-        <TopName>Welcome to Kopiku Dashboard</TopName>
-        <BottomName>Let's choose menu</BottomName>
-      </WebsiteNameContainer>
+      <LeftConatiner>
+        <Logo>
+          <LogoImage
+            src={require("../../Assets/Images/Logo.svg").default}
+            alt="Logo"
+          />
+        </Logo>
+        <WebsiteNameContainer>
+          <TopName>Welcome to Kopiku Dashboard</TopName>
+          <BottomName>Let's choose menu</BottomName>
+        </WebsiteNameContainer>
+      </LeftConatiner>
+
+      <MiddleContainer>
+        <SearchLogo>
+          <SearchText type="search" placeholder="Search menu..." />
+          <SearchImg
+            src={require("../../Assets/Images/Search.svg").default}
+            alt="Search Icon"
+          />
+        </SearchLogo>
+      </MiddleContainer>
       <RightContainer>
-        <SearchMenuContainer>
-          <SearchLogo>
-            <SearchImg
-              src={require("../../Assets/Images/Search.svg").default}
-            />
-            <SearchText type="search" placeholder="Search menu..." />
-          </SearchLogo>
-        </SearchMenuContainer>
         <Bell>
           <BellImg
             src={require("../../Assets/Images/Notification.svg").default}
+            alt="Bell Icon"
           />
         </Bell>
         <ProfileContainer>
           <Profile>
-            <ProfileImg />
+            <ProfileImg
+              src={require("../../Assets/Images/User.jpg")}
+              alt="User Icon"
+            />
           </Profile>
           <ProfileNameContainer>
             <Position>Admin</Position>
-            <ProfileName>Alex Jorandd</ProfileName>
+            <ProfileName>Alex Jorand</ProfileName>
           </ProfileNameContainer>
         </ProfileContainer>
         <AddMenuContainer>
           <Add>
-            <AddImage />
+            <AddImage
+              src={require("../../Assets/Images/Plus.svg").default}
+              alt="Add Icon"
+            />
           </Add>
-          <AddMenu>Add new menu</AddMenu>
+          <AddMenu placeholder="Add new menu" />
         </AddMenuContainer>
       </RightContainer>
     </MainContainer>
@@ -48,30 +65,125 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+  border-bottom: 1px solid black;
+  width: 95%;
+  margin: 0 auto;
+  height: 140px;
 `;
-const WebsiteNameContainer = styled.div`
-  width: 40%;
+const LeftConatiner = styled.div`
+  display: flex;
+
+  align-items: center;
+  width: 30%;
 `;
-const TopName = styled.h6``;
-const BottomName = styled.h4``;
+const Logo = styled.div`
+  width: 40px;
+  margin-right: 80px;
+`;
+const LogoImage = styled.img`
+  display: block;
+  width: 100%;
+`;
+const WebsiteNameContainer = styled.div``;
+const TopName = styled.h2`
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+`;
+const BottomName = styled.h1`
+  font-size: 24px;
+  font-weight: 600;
+  width: 231px;
+`;
+
+const MiddleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 18px 17px;
+  border-radius: 35px;
+  width: 28%;
+`;
+const SearchLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+const SearchImg = styled.img`
+  width: 5.5%;
+`;
+const SearchText = styled.input`
+  border: none;
+  color: #dbd6d7;
+  opacity: 0.5;
+`;
 const RightContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 30%;
 `;
-const SearchMenuContainer = styled.div``;
-const SearchLogo = styled.div``;
-const SearchImg = styled.img``;
-const SearchText = styled.input``;
-const Bell = styled.div``;
-const BellImg = styled.img``;
-const ProfileContainer = styled.div``;
-const Profile = styled.div``;
-const ProfileImg = styled.img``;
-const ProfileNameContainer = styled.div``;
-const Position = styled.h5``;
-const ProfileName = styled.h6``;
-const AddMenuContainer = styled.div``;
-const Add = styled.div``;
-const AddImage = styled.img``;
-const AddMenu = styled.h3``;
+const Bell = styled.div`
+  width: 16%;
+  margin-right: 21px;
+`;
+const BellImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const ProfileContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const Profile = styled.div`
+  width: 25%;
+  border-radius: 50%;
+  overflow: hidden;
+`;
+const ProfileImg = styled.img`
+  display: block;
+  height: 100%;
+  width: 100%;
+`;
+const ProfileNameContainer = styled.div`
+  margin-left: 15px;
+`;
+const Position = styled.h5`
+  color: #bdb0b0;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 7px;
+`;
+const ProfileName = styled.h6`
+  font-weight: 600;
+  font-size: 16px;
+`;
+const AddMenuContainer = styled.div`
+  display: flex;
+  align-items: center;
+  background: #eaeaea;
+  padding: 20px 10px;
+  width: 100%;
+  border-radius: 35px;
+`;
+const Add = styled.div`
+  width: 25px;
+  margin-right: 20px;
+`;
+const AddImage = styled.img`
+  filter: invert();
+  display: block;
+  width: 100%;
+`;
+const AddMenu = styled.input`
+  display: block;
+  width: 80%;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  ::placeholder {
+    color: black;
+    opacity: 1;
+  }
+`;

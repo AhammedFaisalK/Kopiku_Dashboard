@@ -11,11 +11,12 @@ function App() {
       <Router>
         <Header />
         <Container>
+          <SideBar />
+
           <Routes>
             <Route path="/" element={<Dashboard />} />
           </Routes>
         </Container>
-        <SideBar />
       </Router>
     </>
   );
