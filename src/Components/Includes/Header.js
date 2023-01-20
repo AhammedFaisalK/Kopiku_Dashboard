@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Header() {
@@ -6,10 +7,12 @@ function Header() {
     <MainContainer>
       <LeftConatiner>
         <Logo>
-          <LogoImage
-            src={require("../../Assets/Images/Logo.svg").default}
-            alt="Logo"
-          />
+          <Link to="/">
+            <LogoImage
+              src={require("../../Assets/Images/Logo.svg").default}
+              alt="Logo"
+            />
+          </Link>
         </Logo>
         <WebsiteNameContainer>
           <TopName>Welcome to Kopiku Dashboard</TopName>

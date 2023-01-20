@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 function Cart() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   return (
     <CartContainer>
       <BillDetails>
@@ -28,13 +28,17 @@ function Cart() {
           </AddCart>
         </PriceSection>
         <ItemNeeds>
-          <DecrementItem onClick={(prevState) => setCount(prevState - 1)}>
+          <DecrementItem
+            onClick={() =>
+              setCount((prevState) => (prevState === 1 ? 1 : prevState - 1))
+            }
+          >
             <DecrementImage
               src={require("../../Assets/Images/Minus.svg").default}
             />
           </DecrementItem>
           <Count>{count}</Count>
-          <IncrementItem onClick={(prevState) => setCount(prevState + 1)}>
+          <IncrementItem onClick={() => setCount((prevState) => prevState + 1)}>
             <AddImage src={require("../../Assets/Images/Plus.svg").default} />
           </IncrementItem>
         </ItemNeeds>
@@ -53,13 +57,17 @@ function Cart() {
           </AddCart>
         </PriceSection>
         <ItemNeeds>
-          <DecrementItem>
+          <DecrementItem
+            onClick={() =>
+              setCount((prevState) => (prevState === 1 ? 1 : prevState - 1))
+            }
+          >
             <DecrementImage
               src={require("../../Assets/Images/Minus.svg").default}
             />
           </DecrementItem>
-          <Count>2</Count>
-          <IncrementItem>
+          <Count>{count}</Count>
+          <IncrementItem onClick={() => setCount((prevState) => prevState + 1)}>
             <AddImage src={require("../../Assets/Images/Plus.svg").default} />
           </IncrementItem>
         </ItemNeeds>
@@ -182,6 +190,7 @@ const IncrementItem = styled.div`
   border: 1px solid #cec5c4;
   padding: 3px 7px;
   border-radius: 50%;
+  cursor: pointer;
 `;
 const DecrementItem = styled.div`
   margin-right: 20px;
@@ -190,6 +199,7 @@ const DecrementItem = styled.div`
   border: 1px solid #cec5c4;
   padding: 15px 7px;
   border-radius: 50%;
+  cursor: pointer;
 `;
 const AddImage = styled.img`
   width: 100%;

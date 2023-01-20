@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function SideBar() {
@@ -6,45 +7,70 @@ function SideBar() {
     <LeftSideBar>
       <MiddlePortion>
         <MenuItem>
-          <IconContainer>
-            <Icon
-              src={require("../../Assets/Images/Menu.svg").default}
-              alt="Dashboard Icon"
-            />
-          </IconContainer>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <IconContainer>
+              <Icon
+                src={require("../../Assets/Images/Menu.svg").default}
+                alt="Dashboard Icon"
+              />
+            </IconContainer>
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <IconContainer>
-            <Icon
-              src={require("../../Assets/Images/tea.svg").default}
-              alt="tea Icon"
-            />
-          </IconContainer>
+          <NavLink
+            to="/nothing"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <IconContainer>
+              <Icon
+                src={require("../../Assets/Images/tea.svg").default}
+                alt="tea Icon"
+              />
+            </IconContainer>
+          </NavLink>
         </MenuItem>
 
         <MenuItem>
-          <IconContainer>
-            <Icon
-              src={require("../../Assets/Images/wallet.svg").default}
-              alt="wallet Icon"
-            />
-          </IconContainer>
+          <NavLink
+            to="/wallet"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <IconContainer>
+              <Icon
+                src={require("../../Assets/Images/wallet.svg").default}
+                alt="wallet Icon"
+              />
+            </IconContainer>
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <IconContainer>
-            <Icon
-              src={require("../../Assets/Images/Graph.svg").default}
-              alt="Graph Icon"
-            />
-          </IconContainer>
+          <NavLink
+            to="/graph"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <IconContainer>
+              <Icon
+                src={require("../../Assets/Images/Graph.svg").default}
+                alt="Graph Icon"
+              />
+            </IconContainer>
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <IconContainer>
-            <Icon
-              src={require("../../Assets/Images/Settings.svg").default}
-              alt="Settings Icon"
-            />
-          </IconContainer>
+          <NavLink
+            to="/settings"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <IconContainer>
+              <Icon
+                src={require("../../Assets/Images/Settings.svg").default}
+                alt="Settings Icon"
+              />
+            </IconContainer>
+          </NavLink>
         </MenuItem>
       </MiddlePortion>
     </LeftSideBar>
@@ -74,4 +100,5 @@ const IconContainer = styled.span`
 const Icon = styled.img`
   width: 100%;
   display: block;
+  filter: grayscale();
 `;

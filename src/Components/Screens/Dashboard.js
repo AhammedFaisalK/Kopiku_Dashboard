@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import CardLinks from "./CardLinks";
 import Cards from "./Cards";
@@ -6,17 +7,22 @@ import Cart from "./Cart";
 
 function Dashboard() {
   return (
-    <DashboardContainer>
-      <FlexContainer>
-        <LeftSideContainer>
-          <CardLinks />
-          <Cards />
-        </LeftSideContainer>
-        <RightSideContainer>
-          <Cart />
-        </RightSideContainer>
-      </FlexContainer>
-    </DashboardContainer>
+    <>
+      <Helmet>
+        <title>Dashboard</title>
+      </Helmet>
+      <DashboardContainer>
+        <FlexContainer>
+          <LeftSideContainer>
+            <CardLinks />
+            <Cards />
+          </LeftSideContainer>
+          <RightSideContainer>
+            <Cart />
+          </RightSideContainer>
+        </FlexContainer>
+      </DashboardContainer>
+    </>
   );
 }
 
