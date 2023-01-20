@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CardLinks from "./CardLinks";
 import Cards from "./Cards";
+import Cart from "./Cart";
 
 function Dashboard() {
   return (
@@ -11,7 +12,9 @@ function Dashboard() {
           <CardLinks />
           <Cards />
         </LeftSideContainer>
-        <RightSideContainer></RightSideContainer>
+        <RightSideContainer>
+          <Cart />
+        </RightSideContainer>
       </FlexContainer>
     </DashboardContainer>
   );
@@ -19,7 +22,7 @@ function Dashboard() {
 
 export default Dashboard;
 const DashboardContainer = styled.section`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 30px;
 `;

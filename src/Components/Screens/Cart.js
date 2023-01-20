@@ -5,8 +5,8 @@ function Cart() {
   return (
     <CartContainer>
       <BillDetails>
-        <BillHead></BillHead>
-        <BillNo></BillNo>
+        <BillHead>Bills</BillHead>
+        <BillNo>Order #3243</BillNo>
       </BillDetails>
       <ItemRecieveMethod>
         <Method>
@@ -18,7 +18,7 @@ function Cart() {
       <CartSection>
         <PriceSection>
           <CartImageContainer>
-            <CartImage />
+            <CartImage src={require("../../Assets/Images/PeruBeans.jpg")} />
           </CartImageContainer>
           <AddCart>
             <CartItemHeading>Indonesian Beans</CartItemHeading>
@@ -51,7 +51,7 @@ function Cart() {
         <Pay>$ 99.50</Pay>
       </TotalPriceContainer>
       <PaymentSection>
-        <HeadingPyment>Payment</HeadingPyment>
+        <HeadingPayment>Payment</HeadingPayment>
         <PaymentMode>
           <Mode>Cash</Mode>
           <Mode>Debit</Mode>
@@ -64,16 +64,61 @@ function Cart() {
 }
 
 export default Cart;
-const CartContainer = styled.div``;
-const BillDetails = styled.div``;
-const BillHead = styled.h1``;
-const BillNo = styled.h1``;
-const Method = styled.ul``;
+const CartContainer = styled.div`
+  width: 90%;
+  margin: 0 auto 0 70px;
+  background-color: #eeeceb;
+  border-radius: 20px;
+  padding: 40px 30px 65px 30px;
+`;
+const BillDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const BillHead = styled.h1`
+  font-size: 20px;
+  font-weight: 600;
+`;
+const BillNo = styled.h1`
+  font-size: 20px;
+  font-weight: 600;
+`;
+const Method = styled.ul`
+  display: flex;
+`;
+const Item = styled.li`
+  background-color: #d5d2d1;
+  padding: 15px 20px;
+  margin-right: 20px;
+  border-radius: 35px;
+  color: #000;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background-color: #21282c;
+    color: #f6f5f4;
+  }
+  &:nth-child(3) {
+    background-color: #21282c;
+    color: #f6f5f4;
+  }
+`;
 const ItemRecieveMethod = styled.div``;
 const CartSection = styled.div``;
-const PriceSection = styled.div``;
-const CartImageContainer = styled.div``;
-const CartImage = styled.img``;
+const PriceSection = styled.div`
+  display: flex;
+  align-items: center;
+  width: 60%;
+`;
+const CartImageContainer = styled.div`
+  width: 42%;
+`;
+const CartImage = styled.img`
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+`;
 const AddCart = styled.div``;
 const CartItemHeading = styled.h2``;
 const CartItemQty = styled.h3``;
@@ -93,6 +138,7 @@ const TotalPriceContainer = styled.div``;
 const TotalAmount = styled.h5``;
 const Pay = styled.h5``;
 const PaymentSection = styled.div``;
+const HeadingPayment = styled.h6``;
 const PaymentMode = styled.ul``;
 const Mode = styled.li``;
 const CheckOut = styled.button``;
