@@ -1,12 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 function Cards() {
+  const [show, setShow] = useState(null);
+  const cardDetails = [
+    {
+      id: 0,
+      categoryName: "Indonesian Beans",
+      categoryDes:
+        " Selected Coffee Beans with the best Quality from indonesian",
+      price: "$ 35.00",
+      imageUrl: require("../../Assets/Images/IndonesianBeans.jpg"),
+    },
+    {
+      id: 1,
+      categoryName: "Costa Rica Beans",
+      categoryDes:
+        " Selected Coffee Beans with the best Quality from costa rica",
+      price: "$ 35.00",
+      imageUrl: require("../../Assets/Images/CostaricaBeans.jpg"),
+    },
+    {
+      id: 2,
+      categoryName: "Ethopian Beans",
+      categoryDes: " Selected Coffee Beans with the best Quality from ethopia",
+      price: "$ 35.00",
+      imageUrl: require("../../Assets/Images/Ethopian Beans.jpg"),
+    },
+    {
+      id: 3,
+      categoryName: "Peru Beans",
+      categoryDes: " Selected Coffee Beans with the best Quality from Peru",
+      price: "$ 35.00",
+      imageUrl: require("../../Assets/Images/PeruBeans.jpg"),
+    },
+    {
+      id: 4,
+      categoryName: "Guatemala Beans",
+      categoryDes:
+        " Selected Coffee Beans with the best Quality from Guetamala",
+      price: "$ 35.00",
+      imageUrl: require("../../Assets/Images/GuetamalaBeans.jpg"),
+    },
+  ];
+
   return (
     <CardsContainer>
       <SubHeading>Beans menu</SubHeading>
       <Categories>
-        <Category>
+        {/* <Category>
           <CategoryTopSection>
             <CategoryImage>
               <ImageFrame
@@ -122,46 +164,64 @@ function Cards() {
           <CategoryBottomSection>
             <Button>Add to bill</Button>
           </CategoryBottomSection>
-        </Category>
-        <Category>
-          <CategoryTopSection>
-            <CategoryImage>
-              <ImageFrame
-                src={require("../../Assets/Images/IndonesianBeans.jpg")}
-                alt="Dashboard Icon"
-              />
-            </CategoryImage>
-            <CategoryDetails>
-              <CategoryName> Indonesian Beans</CategoryName>
-              <CategoryDescription>
-                Selected Coffee Beans with the best Quality form indonesian
-              </CategoryDescription>
-              <Price>$ 35. 00</Price>
-            </CategoryDetails>
-          </CategoryTopSection>
-          <CategoryMiddleSection>
-            <DiscountPack>
-              <DiscountHeading>Roasting Type</DiscountHeading>
-              <DiscountList>
-                <Percentage>25%</Percentage>
-                <Percentage>50%</Percentage>
-                <Percentage>75%</Percentage>
-                <Percentage>100%</Percentage>
-              </DiscountList>
-            </DiscountPack>
-            <VolumePack>
-              <VolumePackHeading>Volume Pack</VolumePackHeading>
-              <VolumePackList>
-                <Grams>250g</Grams>
-                <Grams>500g</Grams>
-                <Grams>750g</Grams>
-              </VolumePackList>
-            </VolumePack>
-          </CategoryMiddleSection>
-          <CategoryBottomSection>
-            <Button>Add to bill</Button>
-          </CategoryBottomSection>
-        </Category>
+        </Category> */}
+        {cardDetails.map((category) => {
+          return (
+            <Category key={category.id}>
+              <CategoryTopSection>
+                <CategoryImage>
+                  <ImageFrame
+                    src={category.imageUrl}
+                    alt={category.categoryName}
+                  />
+                </CategoryImage>
+                <CategoryDetails>
+                  <CategoryName> {category.categoryName}</CategoryName>
+                  <CategoryDescription>
+                    {category.categoryDes}
+                  </CategoryDescription>
+                  <Price>{category.price}</Price>
+                </CategoryDetails>
+              </CategoryTopSection>
+              {show === category.id ? (
+                <>
+                  {" "}
+                  <CategoryMiddleSection>
+                    <DiscountPack>
+                      <DiscountHeading>Roasting Type</DiscountHeading>
+                      <DiscountList>
+                        <Percentage>25%</Percentage>
+                        <Percentage>50%</Percentage>
+                        <Percentage>75%</Percentage>
+                        <Percentage>100%</Percentage>
+                      </DiscountList>
+                    </DiscountPack>
+                    <VolumePack>
+                      <VolumePackHeading>Volume Pack</VolumePackHeading>
+                      <VolumePackList>
+                        <Grams>250g</Grams>
+                        <Grams>500g</Grams>
+                        <Grams>750g</Grams>
+                      </VolumePackList>
+                    </VolumePack>
+                  </CategoryMiddleSection>
+                  <CategoryBottomSection>
+                    <Button>Add to bill</Button>
+                  </CategoryBottomSection>
+                </>
+              ) : null}
+              {show === category.id ? (
+                <ViewButton onClick={(e) => (e ? setShow(null) : null)}>
+                  View less Details
+                </ViewButton>
+              ) : (
+                <ViewButton onClick={(e) => (e ? setShow(category.id) : null)}>
+                  View details
+                </ViewButton>
+              )}
+            </Category>
+          );
+        })}
       </Categories>
     </CardsContainer>
   );
@@ -297,4 +357,19 @@ const Button = styled.button`
 `;
 const VolumePackList = styled.div`
   display: flex;
+`;
+const ViewButton = styled.button`
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0px;
+  background-color: #d5d2d1;
+  padding: 19px 110px;
+  border-radius: 35px;
+  font-size: 20px;
+  background-color: #d5d2d1;
+  color: #000;
+  &:hover {
+    background-color: #ff7b00;
+    color: #fff;
+  }
 `;
