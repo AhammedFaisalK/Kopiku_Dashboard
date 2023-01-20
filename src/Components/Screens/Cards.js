@@ -172,7 +172,7 @@ const CategoryMiddleSection = styled.div`
 const Percentage = styled.div`
   margin-right: 20px;
   background-color: #d5d2d1;
-  padding: 13px 22px;
+  padding: 13px 20px;
   border-radius: 35px;
   color: #f6f5f4;
   &:hover {
