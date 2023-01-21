@@ -51,6 +51,9 @@ export default CardLinks;
 const CardLinkContainer = styled.div``;
 const CardLinksList = styled.ul`
   display: flex;
+  @media all and (max-width: 640px) {
+    margin-left: -60px;
+  }
 `;
 const ItemLink = styled.li`
   display: flex;

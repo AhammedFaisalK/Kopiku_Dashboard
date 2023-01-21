@@ -98,6 +98,12 @@ const CartContainer = styled.div`
   @media all and (max-width: 980px) {
     margin: 10px 0 0 102px;
   }
+  @media all and (max-width: 768px) {
+    margin: 10px 0 0 58px;
+  }
+  @media all and (max-width: 640px) {
+    margin: 10px 0 0 4px;
+  }
 `;
 const BillDetails = styled.div`
   display: flex;
@@ -133,6 +139,12 @@ const Item = styled.li`
   }
   @media all and (max-width: 1280px) {
     margin-right: 15px;
+  }
+  @media all and (max-width: 768px) {
+    padding: 15px 15px;
+  }
+  @media all and (max-width: 640px) {
+    padding: 15px 8px;
   }
 `;
 const ItemRecieveMethod = styled.div`
@@ -276,6 +288,9 @@ const Mode = styled.li`
   }
   @media all and (max-width: 1280px) {
     margin-right: 25px;
+  }
+  @media all and (max-width: 640px) {
+    padding: 15px 15px;
   }
 `;
 const CheckOut = styled.button`

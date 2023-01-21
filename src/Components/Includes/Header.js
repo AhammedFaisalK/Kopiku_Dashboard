@@ -87,6 +87,10 @@ const LeftConatiner = styled.div`
   @media all and (max-width: 980px) {
     width: 47%;
   }
+  @media all and (max-width: 640px) {
+    width: 76%;
+    justify-content: space-between;
+  }
 `;
 const Logo = styled.div`
   width: 40px;
@@ -99,6 +103,9 @@ const Logo = styled.div`
   }
   @media all and (max-width: 980px) {
     margin-right: 51px;
+  }
+  @media all and (max-width: 768px) {
+    margin-right: 20px;
   }
 `;
 const LogoImage = styled.img`
@@ -118,6 +125,9 @@ const BottomName = styled.h1`
   @media all and (max-width: 1080px) {
     font-size: 20px;
   }
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const MiddleContainer = styled.div`
@@ -129,6 +139,9 @@ const MiddleContainer = styled.div`
   width: 28%;
   @media all and (max-width: 980px) {
     width: 60%;
+  }
+  @media all and (max-width: 640px) {
+    display: none;
   }
 `;
 const SearchLogo = styled.div`
@@ -150,6 +163,9 @@ const RightContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 30%;
+  @media all and (max-width: 640px) {
+    display: none;
+  }
 `;
 const Bell = styled.div`
   width: 16%;
@@ -160,6 +176,9 @@ const Bell = styled.div`
   @media all and (max-width: 980px) {
     margin-right: 0;
     margin-left: 50px;
+  }
+  @media all and (max-width: 768px) {
+    width: 35%;
   }
 `;
 const BellImg = styled.img`
