@@ -179,6 +179,9 @@ const ProfileName = styled.h6`
   @media all and (max-width: 1380px) {
     font-size: 13px;
   }
+  @media all and (max-width: 1280px) {
+    font-size: 16px;
+  }
 `;
 const AddMenuContainer = styled.div`
   display: flex;

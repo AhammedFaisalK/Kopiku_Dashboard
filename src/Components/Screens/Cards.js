@@ -129,6 +129,9 @@ const Category = styled.div`
   margin-right: 11px;
   margin-bottom: 30px;
   height: min-content;
+  @media all and (max-width: 1280px) {
+    width: 100%;
+  }
 `;
 const SubHeading = styled.h2`
   font-weight: 600;
@@ -196,9 +199,12 @@ const Percentage = styled.div`
   @media all and (max-width: 1380px) {
     padding: 13px 9px;
   }
-  @media all and (max-width: 1080px) {
-    padding: 13px 7px;
+  @media all and (max-width: 1280px) {
+    padding: 13px 18px;
   }
+  /* @media all and (max-width: 1080px) {
+    padding: 13px 7px;
+  } */
 `;
 const DiscountHeading = styled.h6`
   font-weight: 500;
@@ -248,9 +254,12 @@ const Grams = styled.div`
   @media all and (max-width: 1380px) {
     margin-right: 25px;
   }
-  @media all and (max-width: 1080px) {
-    padding: 11px 18px;
+  @media all and (max-width: 1280px) {
+    padding: 11px 28px;
   }
+  /* @media all and (max-width: 1080px) {
+    padding: 11px 18px;
+  } */
 `;
 const Button = styled.button`
   cursor: pointer;
@@ -284,5 +293,8 @@ const ViewButton = styled.button`
   }
   @media all and (max-width: 1440px) {
     padding: 19px 22px;
+  }
+  @media all and (max-width: 1280px) {
+    padding: 19px 56px;
   }
 `;

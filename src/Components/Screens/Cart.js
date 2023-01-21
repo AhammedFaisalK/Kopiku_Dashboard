@@ -128,6 +128,9 @@ const Item = styled.li`
     background-color: #21282c;
     color: #f6f5f4;
   }
+  @media all and (max-width: 1280px) {
+    margin-right: 15px;
+  }
 `;
 const ItemRecieveMethod = styled.div`
   margin-top: 40px;
@@ -268,6 +271,9 @@ const Mode = styled.li`
     background-color: #21282c;
     color: #f6f5f4;
   }
+  @media all and (max-width: 1280px) {
+    margin-right: 25px;
+  }
 `;
 const CheckOut = styled.button`
   display: block;
@@ -278,4 +284,8 @@ const CheckOut = styled.button`
   border-radius: 35px;
   font-size: 16px;
   color: #fff;
+  @media all and (max-width: 1280px) {
+    width: 18rem;
+    padding: 21px 89px;
+  }
 `;
