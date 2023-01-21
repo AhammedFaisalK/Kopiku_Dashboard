@@ -70,6 +70,9 @@ const FlexContainer = styled.div`
   display: flex;
   width: 95%;
   margin: 0 auto;
+  @media all and (max-width: 980px) {
+    flex-wrap: wrap;
+  }
 `;
 const LeftSideContainer = styled.div`
   width: 60%;

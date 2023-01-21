@@ -75,9 +75,6 @@ const ItemLink = styled.li`
   @media all and (max-width: 1280px) {
     padding: 11px 13px;
   }
-  @media all and (max-width: 1080px) {
-    padding: 11px 4px;
-  }
 `;
 const ImageList = styled.div`
   background: #d9d9d9;
@@ -97,6 +94,7 @@ const ItemName = styled.h2`
     color: #ffff;
   }
   @media all and (max-width: 1280px) {
+    margin-left: 0;
     font-size: 12px;
   }
 `;

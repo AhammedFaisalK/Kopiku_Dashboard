@@ -202,9 +202,9 @@ const Percentage = styled.div`
   @media all and (max-width: 1280px) {
     padding: 13px 18px;
   }
-  /* @media all and (max-width: 1080px) {
-    padding: 13px 7px;
-  } */
+  @media all and (max-width: 1080px) {
+    padding: 13px 15px;
+  }
 `;
 const DiscountHeading = styled.h6`
   font-weight: 500;
@@ -257,9 +257,9 @@ const Grams = styled.div`
   @media all and (max-width: 1280px) {
     padding: 11px 28px;
   }
-  /* @media all and (max-width: 1080px) {
-    padding: 11px 18px;
-  } */
+  @media all and (max-width: 1080px) {
+    padding: 11px 25px;
+  }
 `;
 const Button = styled.button`
   cursor: pointer;

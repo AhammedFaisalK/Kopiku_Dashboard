@@ -78,12 +78,21 @@ const LeftConatiner = styled.div`
 
   align-items: center;
   width: 30%;
+  @media all and (max-width: 1280px) {
+    margin-left: 12px;
+  }
+  @media all and (max-width: 1080px) {
+    margin-left: 5px;
+  }
 `;
 const Logo = styled.div`
   width: 40px;
   margin-right: 80px;
   @media all and (max-width: 1280px) {
     margin-right: 24px;
+  }
+  @media all and (max-width: 1080px) {
+    margin-right: 10px;
   }
 `;
 const LogoImage = styled.img`
@@ -100,6 +109,9 @@ const BottomName = styled.h1`
   font-size: 24px;
   font-weight: 600;
   width: 231px;
+  @media all and (max-width: 1080px) {
+    font-size: 20px;
+  }
 `;
 
 const MiddleContainer = styled.div`
