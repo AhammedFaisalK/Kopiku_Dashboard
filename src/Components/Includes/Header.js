@@ -84,6 +84,9 @@ const LeftConatiner = styled.div`
   @media all and (max-width: 1080px) {
     margin-left: 5px;
   }
+  @media all and (max-width: 980px) {
+    width: 47%;
+  }
 `;
 const Logo = styled.div`
   width: 40px;
@@ -93,6 +96,9 @@ const Logo = styled.div`
   }
   @media all and (max-width: 1080px) {
     margin-right: 10px;
+  }
+  @media all and (max-width: 980px) {
+    margin-right: 51px;
   }
 `;
 const LogoImage = styled.img`
@@ -121,6 +127,9 @@ const MiddleContainer = styled.div`
   padding: 18px 17px;
   border-radius: 35px;
   width: 28%;
+  @media all and (max-width: 980px) {
+    width: 60%;
+  }
 `;
 const SearchLogo = styled.div`
   display: flex;
@@ -148,6 +157,10 @@ const Bell = styled.div`
   @media all and (max-width: 1380px) {
     width: 22%;
   }
+  @media all and (max-width: 980px) {
+    margin-right: 0;
+    margin-left: 50px;
+  }
 `;
 const BellImg = styled.img`
   display: block;
@@ -156,6 +169,9 @@ const BellImg = styled.img`
 const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
+  @media all and (max-width: 980px) {
+    display: none;
+  }
 `;
 const Profile = styled.div`
   width: 25%;

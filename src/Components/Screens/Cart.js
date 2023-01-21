@@ -95,6 +95,9 @@ const CartContainer = styled.div`
   @media all and (max-width: 1280px) {
     margin: 0 0 0 85px;
   }
+  @media all and (max-width: 980px) {
+    margin: 10px 0 0 102px;
+  }
 `;
 const BillDetails = styled.div`
   display: flex;
