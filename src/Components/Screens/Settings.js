@@ -5,7 +5,7 @@ function Settings() {
   return (
     <>
       <Helmet>
-        <title>Coming Soon</title>
+        <title>Settings</title>
       </Helmet>
       <Container>
         <ComingSoonImage

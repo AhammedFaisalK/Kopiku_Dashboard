@@ -92,6 +92,9 @@ const CartContainer = styled.div`
   background-color: #eeeceb;
   border-radius: 20px;
   padding: 40px 30px 65px 30px;
+  @media all and (max-width: 1280px) {
+    margin: 0 0 0 85px;
+  }
 `;
 const BillDetails = styled.div`
   display: flex;
@@ -237,6 +240,7 @@ const Pay = styled.h5`
 `;
 const PaymentSection = styled.div`
   margin-top: 80px;
+  width: 383px;
 `;
 const HeadingPayment = styled.h6`
   font-size: 15px;
@@ -267,7 +271,7 @@ const Mode = styled.li`
 `;
 const CheckOut = styled.button`
   display: block;
-  width: 95%;
+  width: 23rem;
   margin: 0 auto;
   background-color: #ff7b00;
   padding: 21px 139px;

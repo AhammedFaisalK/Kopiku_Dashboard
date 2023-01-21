@@ -5,7 +5,7 @@ function Wallet() {
   return (
     <>
       <Helmet>
-        <title>Coming Soon</title>
+        <title>Wallet</title>
       </Helmet>
       <Container>
         <ComingSoonImage

@@ -85,6 +85,9 @@ const LeftSideBar = styled.aside`
 `;
 const MiddlePortion = styled.ul`
   padding-top: 30px;
+  @media all and (max-width: 1440px) {
+    margin-left: 20px;
+  }
 `;
 const MenuItem = styled.li`
   width: 40px;

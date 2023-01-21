@@ -68,9 +68,11 @@ const DashboardContainer = styled.section`
 `;
 const FlexContainer = styled.div`
   display: flex;
+  width: 95%;
+  margin: 0 auto;
 `;
 const LeftSideContainer = styled.div`
   width: 60%;
-  margin-left: 50px;
+  margin: 0 auto;
 `;
 const RightSideContainer = styled.div``;

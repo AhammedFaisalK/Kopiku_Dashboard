@@ -5,7 +5,7 @@ function Graph() {
   return (
     <>
       <Helmet>
-        <title>Coming Soon</title>
+        <title>Graph</title>
       </Helmet>
       <Container>
         <ComingSoonImage

@@ -69,11 +69,23 @@ const ItemLink = styled.li`
     margin-right: 0;
   }
   cursor: pointer;
+  @media all and (max-width: 1380px) {
+    padding: 11px 4px;
+  }
+  @media all and (max-width: 1280px) {
+    padding: 11px 13px;
+  }
+  @media all and (max-width: 1080px) {
+    padding: 11px 4px;
+  }
 `;
 const ImageList = styled.div`
   background: #d9d9d9;
   padding: 10px;
   border-radius: 50%;
+  @media all and (max-width: 1280px) {
+    display: none;
+  }
 `;
 const ListIcon = styled.img``;
 const ItemName = styled.h2`
@@ -83,5 +95,8 @@ const ItemName = styled.h2`
   color: #a69494;
   &:hover {
     color: #ffff;
+  }
+  @media all and (max-width: 1280px) {
+    font-size: 12px;
   }
 `;

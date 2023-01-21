@@ -190,6 +190,15 @@ const Percentage = styled.div`
     background-color: #21282c;
     color: #f6f5f4;
   }
+  @media all and (max-width: 1440px) {
+    padding: 13px 14px;
+  }
+  @media all and (max-width: 1380px) {
+    padding: 13px 9px;
+  }
+  @media all and (max-width: 1080px) {
+    padding: 13px 7px;
+  }
 `;
 const DiscountHeading = styled.h6`
   font-weight: 500;
@@ -233,6 +242,15 @@ const Grams = styled.div`
     background-color: #21282c;
     color: #f6f5f4;
   }
+  @media all and (max-width: 1440px) {
+    padding: 11px 17px;
+  }
+  @media all and (max-width: 1380px) {
+    margin-right: 25px;
+  }
+  @media all and (max-width: 1080px) {
+    padding: 11px 18px;
+  }
 `;
 const Button = styled.button`
   cursor: pointer;
@@ -242,6 +260,10 @@ const Button = styled.button`
   font-size: 20px;
   color: #fff;
   width: 100%;
+  @media all and (max-width: 1280px) {
+    width: 94%;
+    margin: 0 auto;
+  }
 `;
 const VolumePackList = styled.div`
   display: flex;
@@ -259,5 +281,8 @@ const ViewButton = styled.button`
   &:hover {
     background-color: #ff7b00;
     color: #fff;
+  }
+  @media all and (max-width: 1440px) {
+    padding: 19px 22px;
   }
 `;

@@ -82,6 +82,9 @@ const LeftConatiner = styled.div`
 const Logo = styled.div`
   width: 40px;
   margin-right: 80px;
+  @media all and (max-width: 1280px) {
+    margin-right: 24px;
+  }
 `;
 const LogoImage = styled.img`
   display: block;
@@ -130,6 +133,9 @@ const RightContainer = styled.div`
 const Bell = styled.div`
   width: 16%;
   margin-right: 21px;
+  @media all and (max-width: 1380px) {
+    width: 22%;
+  }
 `;
 const BellImg = styled.img`
   display: block;
@@ -143,6 +149,12 @@ const Profile = styled.div`
   width: 25%;
   border-radius: 50%;
   overflow: hidden;
+  @media all and (max-width: 1440px) {
+    width: 28%;
+  }
+  @media all and (max-width: 1380px) {
+    width: 25%;
+  }
 `;
 const ProfileImg = styled.img`
   display: block;
@@ -151,6 +163,9 @@ const ProfileImg = styled.img`
 `;
 const ProfileNameContainer = styled.div`
   margin-left: 15px;
+  @media all and (max-width: 1380px) {
+    margin-right: 10px;
+  }
 `;
 const Position = styled.h5`
   color: #bdb0b0;
@@ -161,6 +176,9 @@ const Position = styled.h5`
 const ProfileName = styled.h6`
   font-weight: 600;
   font-size: 16px;
+  @media all and (max-width: 1380px) {
+    font-size: 13px;
+  }
 `;
 const AddMenuContainer = styled.div`
   display: flex;
@@ -169,6 +187,15 @@ const AddMenuContainer = styled.div`
   padding: 20px 10px;
   width: 100%;
   border-radius: 35px;
+  @media all and (max-width: 1440px) {
+    width: 32rem;
+  }
+  @media all and (max-width: 1380px) {
+    width: 38rem;
+  }
+  @media all and (max-width: 1280px) {
+    display: none;
+  }
 `;
 const Add = styled.div`
   width: 25px;

@@ -6,7 +6,7 @@ function ComingSoon() {
   return (
     <>
       <Helmet>
-        <title>Coming Soon</title>
+        <title>Tea</title>
       </Helmet>
       <Container>
         <ComingSoonImage
