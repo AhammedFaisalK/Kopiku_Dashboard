@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 function Cards(props) {
-  // const { setCart } = props;
   const { getItems } = props;
   const [show, setShow] = useState(null);
   const cardDetails = [
@@ -45,10 +44,7 @@ function Cards(props) {
       imageUrl: require("../../Assets/Images/GuetamalaBeans.jpg"),
     },
   ];
-  // const sentItems = (name) => {
-  //   let get = cardDetails.filter((id) => id.categoryName === name);
-  //   setCart(get);
-  // };
+
   return (
     <CardsContainer>
       <SubHeading>Beans menu</SubHeading>
@@ -239,6 +235,7 @@ const Grams = styled.div`
   }
 `;
 const Button = styled.button`
+  cursor: pointer;
   background-color: #ff7b00;
   padding: 17px 10px;
   border-radius: 35px;

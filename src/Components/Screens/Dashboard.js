@@ -49,7 +49,7 @@ function Dashboard() {
         <FlexContainer>
           <LeftSideContainer>
             <CardLinks />
-            <Cards setCart={setCart} getItems={getItems} />
+            <Cards getItems={getItems} />
           </LeftSideContainer>
           <RightSideContainer>
             <Cart cart={cart} />

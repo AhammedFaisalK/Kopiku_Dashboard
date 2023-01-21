@@ -128,6 +128,7 @@ const Item = styled.li`
 `;
 const ItemRecieveMethod = styled.div`
   margin-top: 40px;
+  width: 383px;
 `;
 const CartSection = styled.div`
   margin-top: 40px;
