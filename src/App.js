@@ -12,12 +12,14 @@ import ComingSoon from "./Components/Screens/ComingSoon";
 import Dashboard from "./Components/Screens/Dashboard";
 import Graph from "./Components/Screens/Graph";
 import NoMatch from "./Components/Screens/NoMatch";
+import PreLoader from "./Components/Screens/PreLoader/PreLoader";
 import Settings from "./Components/Screens/Settings";
 import Wallet from "./Components/Screens/Wallet";
 
 function App() {
   return (
     <>
+      <PreLoader />
       <Router>
         <Header />
         <Container>

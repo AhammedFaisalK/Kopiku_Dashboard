@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-function Cart() {
+function Cart(props) {
+  const { cart } = props;
+
+  // console.log(cart);
+
   const [count, setCount] = useState(1);
   return (
     <CartContainer>
@@ -16,73 +20,53 @@ function Cart() {
           <Item>Delivery</Item>
         </Method>
       </ItemRecieveMethod>
-      <CartSection>
-        <PriceSection>
-          <CartImageContainer>
-            <CartImage src={require("../../Assets/Images/PeruBeans.jpg")} />
-          </CartImageContainer>
-          <AddCart>
-            <CartItemHeading>Peru Beans</CartItemHeading>
-            <CartItemQty>Beans= 75%+250g</CartItemQty>
-            <CartItemPriceHeading>$60.00</CartItemPriceHeading>
-          </AddCart>
-        </PriceSection>
-        <ItemNeeds>
-          <DecrementItem
-            onClick={() =>
-              setCount((prevState) => (prevState === 1 ? 1 : prevState - 1))
-            }
-          >
-            <DecrementImage
-              src={require("../../Assets/Images/Minus.svg").default}
-            />
-          </DecrementItem>
-          <Count>{count}</Count>
-          <IncrementItem onClick={() => setCount((prevState) => prevState + 1)}>
-            <AddImage src={require("../../Assets/Images/Plus.svg").default} />
-          </IncrementItem>
-        </ItemNeeds>
-      </CartSection>
-      <CartSection>
-        <PriceSection>
-          <CartImageContainer>
-            <CartImage
-              src={require("../../Assets/Images/IndonesianBeans.jpg")}
-            />
-          </CartImageContainer>
-          <AddCart>
-            <CartItemHeading>Indonesian Beans</CartItemHeading>
-            <CartItemQty>Beans= 75%+250g</CartItemQty>
-            <CartItemPriceHeading>$60.00</CartItemPriceHeading>
-          </AddCart>
-        </PriceSection>
-        <ItemNeeds>
-          <DecrementItem
-            onClick={() =>
-              setCount((prevState) => (prevState === 1 ? 1 : prevState - 1))
-            }
-          >
-            <DecrementImage
-              src={require("../../Assets/Images/Minus.svg").default}
-            />
-          </DecrementItem>
-          <Count>{count}</Count>
-          <IncrementItem onClick={() => setCount((prevState) => prevState + 1)}>
-            <AddImage src={require("../../Assets/Images/Plus.svg").default} />
-          </IncrementItem>
-        </ItemNeeds>
-        <ItemsSection>
-          <ItemCount>
-            <Item1>Items</Item1>
-            <Item1>Discount</Item1>
-          </ItemCount>
-          <PriceCount>
-            <Price1>$ 102.50</Price1>
-            <Price1>-$ 3.00</Price1>
-          </PriceCount>
-        </ItemsSection>
-      </CartSection>
+      {cart.map((element) => {
+        console.log(element);
 
+        return (
+          <CartSection>
+            <PriceSection>
+              <CartImageContainer>
+                <CartImage src={element.item.imageUrl} />
+              </CartImageContainer>
+              <AddCart>
+                <CartItemHeading>{element.item.categoryName}</CartItemHeading>
+                <CartItemQty>Beans= 75%+250g</CartItemQty>
+                <CartItemPriceHeading>$60.00</CartItemPriceHeading>
+              </AddCart>
+            </PriceSection>
+            <ItemNeeds>
+              <DecrementItem
+                onClick={() =>
+                  setCount((prevState) => (prevState === 1 ? 1 : prevState - 1))
+                }
+              >
+                <DecrementImage
+                  src={require("../../Assets/Images/Minus.svg").default}
+                />
+              </DecrementItem>
+              <Count>{count}</Count>
+              <IncrementItem
+                onClick={() => setCount((prevState) => prevState + 1)}
+              >
+                <AddImage
+                  src={require("../../Assets/Images/Plus.svg").default}
+                />
+              </IncrementItem>
+            </ItemNeeds>
+          </CartSection>
+        );
+      })}
+      <ItemsSection>
+        <ItemCount>
+          <Item1>Items</Item1>
+          <Item1>Discount</Item1>
+        </ItemCount>
+        <PriceCount>
+          <Price1>$ 102.50</Price1>
+          <Price1>-$ 3.00</Price1>
+        </PriceCount>
+      </ItemsSection>
       <TotalPriceContainer>
         <TotalAmount>Total</TotalAmount>
         <Pay>$ 99.50</Pay>
@@ -282,7 +266,7 @@ const Mode = styled.li`
 `;
 const CheckOut = styled.button`
   display: block;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   background-color: #ff7b00;
   padding: 21px 139px;

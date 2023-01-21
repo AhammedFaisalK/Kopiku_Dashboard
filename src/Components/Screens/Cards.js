@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-function Cards() {
+function Cards(props) {
+  // const { setCart } = props;
+  const { getItems } = props;
   const [show, setShow] = useState(null);
   const cardDetails = [
     {
@@ -43,7 +45,10 @@ function Cards() {
       imageUrl: require("../../Assets/Images/GuetamalaBeans.jpg"),
     },
   ];
-
+  // const sentItems = (name) => {
+  //   let get = cardDetails.filter((id) => id.categoryName === name);
+  //   setCart(get);
+  // };
   return (
     <CardsContainer>
       <SubHeading>Beans menu</SubHeading>
@@ -89,7 +94,9 @@ function Cards() {
                     </VolumePack>
                   </CategoryMiddleSection>
                   <CategoryBottomSection>
-                    <Button>Add to bill</Button>
+                    <Button onClick={() => getItems(category)}>
+                      Add to bill
+                    </Button>
                   </CategoryBottomSection>
                 </>
               ) : null}
@@ -125,6 +132,7 @@ const Category = styled.div`
   width: 48%;
   margin-right: 11px;
   margin-bottom: 30px;
+  height: min-content;
 `;
 const SubHeading = styled.h2`
   font-weight: 600;
