@@ -107,4 +107,7 @@ const ItemName = styled.h2`
     margin-left: 0;
     font-size: 12px;
   }
+  @media all and (max-width: 480px) {
+    width: 20%;
+  }
 `;
