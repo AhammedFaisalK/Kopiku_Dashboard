@@ -6,7 +6,7 @@ function Cards(props) {
   const [show, setShow] = useState(null);
   const cardDetails = [
     {
-      id: 0,
+      id: 1,
       categoryName: "Indonesian Beans",
       categoryDes:
         " Selected Coffee Beans with the best Quality from indonesian",
@@ -14,7 +14,7 @@ function Cards(props) {
       imageUrl: require("../../Assets/Images/IndonesianBeans.jpg"),
     },
     {
-      id: 1,
+      id: 2,
       categoryName: "Costa Rica Beans",
       categoryDes:
         " Selected Coffee Beans with the best Quality from costa rica",
@@ -22,21 +22,21 @@ function Cards(props) {
       imageUrl: require("../../Assets/Images/CostaricaBeans.jpg"),
     },
     {
-      id: 2,
+      id: 3,
       categoryName: "Ethopian Beans",
       categoryDes: " Selected Coffee Beans with the best Quality from ethopia",
       price: "$ 35.00",
       imageUrl: require("../../Assets/Images/Ethopian Beans.jpg"),
     },
     {
-      id: 3,
+      id: 4,
       categoryName: "Peru Beans",
       categoryDes: " Selected Coffee Beans with the best Quality from Peru",
       price: "$ 35.00",
       imageUrl: require("../../Assets/Images/PeruBeans.jpg"),
     },
     {
-      id: 4,
+      id: 5,
       categoryName: "Guatemala Beans",
       categoryDes:
         " Selected Coffee Beans with the best Quality from Guetamala",

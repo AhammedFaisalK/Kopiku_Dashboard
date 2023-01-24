@@ -14,6 +14,7 @@ function Dashboard() {
         ...cart,
         {
           item: i,
+          no: 1,
           count: 1,
         },
       ]);
@@ -21,7 +22,7 @@ function Dashboard() {
       let flag = 0;
       cart.forEach((c) => {
         if (c.item.id === i.id) {
-          c.count += 1;
+          c.no = c.no + 1;
           flag = 1;
           return;
         }
@@ -31,14 +32,41 @@ function Dashboard() {
           ...cart,
           {
             item: i,
+            no: 1,
             count: 1,
           },
         ]);
       } else {
-        setCart(cart);
+        setCart([...cart]);
       }
     }
-    console.log(cart);
+    // console.log(cart);
+  };
+  const incrementCount = (id) => {
+    // console.log(id);
+    cart.forEach((c) => {
+      if (c.item.id === id) {
+        c.no = c.no + 1;
+        c.count = c.count + 1;
+        setCart([...cart]);
+        return;
+      }
+    });
+  };
+  const decrementCount = (id) => {
+    // console.log(id);
+    cart.forEach((c, i) => {
+      if (c.item.id === id) {
+        c.no = c.no - 1;
+        c.count = c.count - 1;
+
+        if (c.no === 0) {
+          cart.splice(i, 1);
+        }
+        setCart([...cart]);
+        return;
+      }
+    });
   };
   return (
     <>
@@ -52,7 +80,11 @@ function Dashboard() {
             <Cards getItems={getItems} />
           </LeftSideContainer>
           <RightSideContainer>
-            <Cart cart={cart} />
+            <Cart
+              cart={cart}
+              incrementCount={incrementCount}
+              decrementCount={decrementCount}
+            />
           </RightSideContainer>
         </FlexContainer>
       </DashboardContainer>

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function CardLinks() {
@@ -34,12 +35,18 @@ function CardLinks() {
       <CardLinksList>
         {items.map((item) => {
           return (
-            <ItemLink key={item.id}>
-              <ImageList>
-                <ListIcon src={item.imageUrl} alt={item.itemName} />
-              </ImageList>
-              <ItemName>{item.itemName}</ItemName>
-            </ItemLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              key={item.id}
+            >
+              <ItemLink key={item.id}>
+                <ImageList>
+                  <ListIcon src={item.imageUrl} alt={item.itemName} />
+                </ImageList>
+                <ItemName>{item.itemName}</ItemName>
+              </ItemLink>
+            </NavLink>
           );
         })}
       </CardLinksList>
@@ -69,7 +76,7 @@ const ItemLink = styled.li`
     color: white;
   }
   &:last-child {
-    margin-right: 0;
+    /* margin-right: 0; */
   }
   cursor: pointer;
   @media all and (max-width: 1380px) {

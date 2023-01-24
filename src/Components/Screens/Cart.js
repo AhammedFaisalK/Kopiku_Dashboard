@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 function Cart(props) {
   const { cart } = props;
-
+  const { incrementCount } = props;
+  const { decrementCount } = props;
   // console.log(cart);
+  // console.log(incrementCount, decrementCount);
 
-  const [count, setCount] = useState(1);
   return (
     <CartContainer>
       <BillDetails>
@@ -21,10 +22,10 @@ function Cart(props) {
         </Method>
       </ItemRecieveMethod>
       {cart.map((element) => {
-        console.log(element);
+        // console.log(element);
 
         return (
-          <CartSection>
+          <CartSection key={element.item.id}>
             <PriceSection>
               <CartImageContainer>
                 <CartImage src={element.item.imageUrl} />
@@ -32,23 +33,19 @@ function Cart(props) {
               <AddCart>
                 <CartItemHeading>{element.item.categoryName}</CartItemHeading>
                 <CartItemQty>Beans= 75%+250g</CartItemQty>
-                <CartItemPriceHeading>$60.00</CartItemPriceHeading>
+                <CartItemPriceHeading>
+                  {element.item.price}
+                </CartItemPriceHeading>
               </AddCart>
             </PriceSection>
             <ItemNeeds>
-              <DecrementItem
-                onClick={() =>
-                  setCount((prevState) => (prevState === 1 ? 1 : prevState - 1))
-                }
-              >
+              <DecrementItem onClick={() => decrementCount(element.item.id)}>
                 <DecrementImage
                   src={require("../../Assets/Images/Minus.svg").default}
                 />
               </DecrementItem>
-              <Count>{count}</Count>
-              <IncrementItem
-                onClick={() => setCount((prevState) => prevState + 1)}
-              >
+              <Count>{element.count} </Count>
+              <IncrementItem onClick={() => incrementCount(element.item.id)}>
                 <AddImage
                   src={require("../../Assets/Images/Plus.svg").default}
                 />

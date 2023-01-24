@@ -38,10 +38,12 @@ function Header() {
         </Bell>
         <ProfileContainer>
           <Profile>
-            <ProfileImg
-              src={require("../../Assets/Images/User.jpg")}
-              alt="User Icon"
-            />
+            <Link to="/">
+              <ProfileImg
+                src={require("../../Assets/Images/User.jpg")}
+                alt="User Icon"
+              />
+            </Link>
           </Profile>
           <ProfileNameContainer>
             <Position>Admin</Position>
@@ -90,6 +92,9 @@ const LeftConatiner = styled.div`
   @media all and (max-width: 640px) {
     width: 76%;
     justify-content: space-between;
+  }
+  @media all and (max-width: 640px) {
+    width: 98%;
   }
 `;
 const Logo = styled.div`
