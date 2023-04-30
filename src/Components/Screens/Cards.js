@@ -63,7 +63,7 @@ function Cards({ getItems }) {
                   <CategoryDescription>
                     {category.categoryDes}
                   </CategoryDescription>
-                  <Price>{category.price}</Price>
+                  <Price>${category.price}</Price>
                 </CategoryDetails>
               </CategoryTopSection>
               {show === category.id ? (
