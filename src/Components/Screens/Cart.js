@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-function Cart(props) {
-  const { cart } = props;
-  const { incrementCount } = props;
-  const { decrementCount } = props;
+function Cart({cart, incrementCount, decrementCount}) {
+
   // console.log(cart);
   // console.log(incrementCount, decrementCount);
 
@@ -34,7 +32,7 @@ function Cart(props) {
                 <CartItemHeading>{element.item.categoryName}</CartItemHeading>
                 <CartItemQty>Beans= 75%+250g</CartItemQty>
                 <CartItemPriceHeading>
-                  {element.item.price}
+                ${parseInt(element.item.price)*element.count}
                 </CartItemPriceHeading>
               </AddCart>
             </PriceSection>

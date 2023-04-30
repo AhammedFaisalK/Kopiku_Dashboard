@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-function Cards(props) {
-  const { getItems } = props;
+function Cards({ getItems }) {
   const [show, setShow] = useState(null);
   const cardDetails = [
     {
@@ -10,7 +9,7 @@ function Cards(props) {
       categoryName: "Indonesian Beans",
       categoryDes:
         " Selected Coffee Beans with the best Quality from indonesian",
-      price: "$ 35.00",
+      price: "35.00",
       imageUrl: require("../../Assets/Images/IndonesianBeans.jpg"),
     },
     {
@@ -18,21 +17,21 @@ function Cards(props) {
       categoryName: "Costa Rica Beans",
       categoryDes:
         " Selected Coffee Beans with the best Quality from costa rica",
-      price: "$ 35.00",
+      price: "35.00",
       imageUrl: require("../../Assets/Images/CostaricaBeans.jpg"),
     },
     {
       id: 3,
       categoryName: "Ethopian Beans",
       categoryDes: " Selected Coffee Beans with the best Quality from ethopia",
-      price: "$ 35.00",
+      price: "35.00",
       imageUrl: require("../../Assets/Images/Ethopian Beans.jpg"),
     },
     {
       id: 4,
       categoryName: "Peru Beans",
       categoryDes: " Selected Coffee Beans with the best Quality from Peru",
-      price: "$ 35.00",
+      price: "35.00",
       imageUrl: require("../../Assets/Images/PeruBeans.jpg"),
     },
     {
@@ -40,7 +39,7 @@ function Cards(props) {
       categoryName: "Guatemala Beans",
       categoryDes:
         " Selected Coffee Beans with the best Quality from Guetamala",
-      price: "$ 35.00",
+      price: "35.00",
       imageUrl: require("../../Assets/Images/GuetamalaBeans.jpg"),
     },
   ];
